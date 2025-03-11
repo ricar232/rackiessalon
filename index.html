@@ -1,146 +1,226 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rackie's Salon</title>
-    <!-- Importamos la fuente desde Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Pacifico', cursive;
-            background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-            color: #333;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 20px 0;
-            color: #ff6f61;
-        }
-        .circles {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .circle-wrapper {
-            position: relative;
-            width: 200px; /* Tamaño base */
-            height: 200px;
-            perspective: 1000px;
-        }
-        .circle {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-        .circle:hover {
-            transform: scale(1.1);
-        }
-        .circle-content {
-            width: 100%;
-            height: 100%;
-        }
-        .circle-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .particle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            animation: float 5s infinite ease-in-out;
-        }
-        .particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-        .particle:nth-child(2) { top: 30%; left: 70%; animation-delay: 1s; }
-        .particle:nth-child(3) { top: 60%; left: 40%; animation-delay: 2s; }
-        .particle:nth-child(4) { top: 80%; left: 10%; animation-delay: 3s; }
-        .particle:nth-child(5) { top: 50%; left: 90%; animation-delay: 4s; }
-        .particle:nth-child(6) { top: 20%; left: 50%; animation-delay: 5s; }
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Rackie's Salon</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="Rackie's Salon - Especialistas en uñas acrílicas, gel, SNS y más." />
+        <meta name="keywords" content="salón de uñas, manicura, pedicura, uñas acrílicas, Winter Haven, Rackie's Salon" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body class="is-preload">
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
+        <!-- Wrapper -->
+            <div id="wrapper">
 
-        /* RESPONSIVIDAD */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .circle-wrapper {
-                width: 150px;
-                height: 150px;
-            }
-        }
+                <!-- Intro -->
+                    <section class="intro">
+                        <header>
+                            <h1>Rackie's Salon</h1>
+                            <p>Tus uñas, nuestro arte. <br>
+                            <a href="https://www.facebook.com/people/Rackies-Salon/" target="_blank">Facebook</a> | 
+                            <a href="https://www.google.com/maps/place/1500+42nd+St,+Winter+Haven,+FL" target="_blank">Ubicación</a></p>
+                            <ul class="actions">
+                                <li><a href="#first" class="arrow scrolly"><span class="label">Siguiente</span></a></li>
+                            </ul>
+                        </header>
+                        <div class="content">
+                            <span class="image fill" data-position="center"><img src="images/logo-SFW.gif" alt="Logo de Rackie's Salon" /></span>
+                        </div>
+                    </section>
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            .circle-wrapper {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>Rackie's Salon</h1>
-    <div class="circles">
-        <a href="salon.html" class="circle-wrapper" target="_blank">
-            <div class="particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
+                <!-- Section -->
+                    <section id="first">
+                        <header>
+                            <h2>Consiéntete, <br>
+                            tus uñas lo merecen.</h2>
+                        </header>
+                        <div class="content">
+                            <p><strong>Desde nuestra apertura,</strong> <br> 
+                            <strong>Rackie's Salon</strong> se ha convertido en el destino preferido para quienes buscan uñas impecables en Winter Haven. <br> Contamos con técnicos de uñas altamente capacitados para brindarte los mejores diseños y acabados. <br>
+                            Ya sea tu primera vez o tu visita número cien, saldrás sintiéndote increíble.</p>
+                            <span class="image main"><img src="images/bannerPicSFW.gif" alt="Uñas perfectas" /></span>
+                        </div>
+                    </section>
+
+                <!-- Section -->
+                    <section>
+                        <header>
+                            <h2>Nuestros Servicios</h2>
+                        </header>
+                        <div class="content">
+                            <p><strong>La mejor calidad</strong> en productos y servicios para tus uñas:</p>
+                            <a href="#priceList"> 
+                                <ul class="feature-icons">
+                                    <li class="icon solid fa-heart">Acrílico</li>
+                                    <li class="icon solid fa-heart">SNS</li>
+                                    <li class="icon solid fa-heart">Gel duro</li>
+                                    <li class="icon solid fa-heart">Gelly Tips</li>
+                                    <li class="icon solid fa-heart">Manicura y Pedicura</li>
+                                    <li class="icon solid fa-heart">Arte de uñas personalizado</li>
+                                </ul>
+                            </a>
+                            <p>Lista de precios a continuación</p>
+                        </div>
+                    </section>
+
+                <!-- Section -->
+                    <section>
+                        <header>
+                            <h2>Lista de Precios</h2>
+                            
+                                <h3>Shiarna Mahon</h3>
+                                <p>"¡Me encanta venir aquí! El personal es muy amable y mis uñas siempre quedan perfectas. ¡Salón increíble, lo recomiendo a todos! ❤️"</p>
+                            
+                        </header>
+                        <div class="content">
+                            <div id="priceList">
+                                <div class="leftSide">
+                                    <p><strong>Acrílico</strong><br>
+                                        *Juego completo de uñas acrílicas con esmalte normal $55 <br>
+                                        *Relleno con esmalte normal $45 <br>
+                                        *Juego completo de uñas acrílicas con Shellac $65 <br>
+                                        *Relleno con Shellac $50 <br>
+                                        *Juego completo de uñas acrílicas con puntas francesas $75 + $10 (pintadas a mano) <br>
+                                        *Acrílico Ombre $75 <br>
+                                    </p>
+                                    
+                                    <p><strong>SNS Dipping Powder</strong><br>
+                                        *SNS en uñas naturales $55 <br>
+                                        *SNS CON tips $65 <br>
+                                        *SNS Ombre $75 <br>
+                                        *SNS French Tips $10 <br>
+                                    </p>
+                                    
+                                    <p><strong>Gel Duro</strong><br>
+                                        *Juego completo de gel duro $85 <br>
+                                        *Relleno de gel duro $70 <br>
+                                    </p>
+                                    
+                                    <p><strong>Gelly Tips</strong><br>
+                                        *Juego completo de Gelly Tips $60
+                                    </p>
+
+                                    <p><strong>General</strong><br>
+                                        *Lijado, Pulido y Esmalte Normal $20 <br>
+                                        *Lijado, Pulido y Shellac $35 <br>
+                                        *Parafina $15 <br>
+                                        *Remoción de extensiones de uñas $25 <br>
+                                        *Arte de uñas desde $5 <br>
+                                        *Puntas francesas pintadas $10 <br>
+                                        *Cromo/Catseyes $10 <br>
+                                        *Builder Gel $15 <br>
+                                    </p>
+                                    
+                                </div>
+                                <div class="rightSide">
+                                    <p><strong>Manicura y Pedicura</strong> <br>
+                                            *Manicura con esmalte normal $35 <br>
+                                            *Manicura con Shellac $45 <br>
+                                            *Pedicura con esmalte normal $40 <br>
+                                            *Pedicura con Shellac $50 <br>
+                                            *Manicura y Pedicura con esmalte normal $70 <br>
+                                            *Manicura y Pedicura con Shellac $90 <br>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Section -->
+                                <section>
+                                    <div class="content">
+                                        <div class="gallery">
+                                            <a href="images/Applying-polish-SFW.gif" class="landscape"><img src="images/Applying-polish-SFW.gif" alt="Aplicando esmalte" /></a>
+                                            <a href="images/pinkBackgroundNailsSFW.gif"><img src="images/pinkBackgroundNailsSFW.gif" alt="Uñas con esmalte rosa" /></a>
+                                            <a href="images/nailPolishSFW.gif"><img src="images/nailPolishSFW.gif" alt="Esmalte rosa" /></a>
+                                            <a href="images/Matte-Black-SFW.gif" class="landscape"><img src="images/Matte-Black-SFW.gif" alt="Uñas negras mate" /></a>
+                                        </div>
+                                    </div>
+                                    <section>
+                                        <header>
+                                            <h3>Jocelyn Cameron</h3>
+                                            <p>"¡El servicio es increíble! <br>
+                                                Siempre me dan exactamente lo que quiero."</p>
+                                        </header>
+                                    </section>
+                                </section>
+                                
+                            <!-- Section -->
+                                <section>
+                                    <header>
+                                        <h3>Ha Hoang Thi</h3>
+                                        <p>"El mejor salón de uñas de la ciudad, dueños y empleados muy amables 👌."</p>
+                                    </header>
+                                </section>
+
+                        </div>
+                    </section>
+
+                <!-- Section -->
+                    <section>
+                        <header>
+                        </header>
+                        <div class="content">
+                            <p><strong>El dinero no puede comprar la felicidad...</strong><br>Pero puede comprar unas uñas perfectas. Haz una cita a continuación.</p>
+                            <ul class="actions">
+                                <li><a href="#priceList" class="button primary large">Lista de Precios</a></li>
+                                <li><a href="tel:+18639786804" class="button large">Cita</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+
+                <!-- Section -->
+                    <section>
+                        <header>
+                            <h2>Contacto</h2>
+                        </header>
+
+                        <div class="content">
+                            <div class="gallery">
+                                <a href="images/LouisSFW.gif" class="landscape"><img src="images/LouisSFW.gif" alt="Manos sosteniendo un bolso" /></a>
+                                <a href="images/Green-Nails-SFW.gif"><img src="images/Green-Nails-SFW.gif" alt="Esmalte verde" /></a>
+                                <a href="images/yellowNailsSFW.gif"><img src="images/yellowNailsSFW.gif" alt="Esmalte amarillo" /></a>
+                            </div>
+                        </div>
+
+                        <footer>
+                            <ul class="items">
+                                <li>
+                                    <h3>Teléfono</h3>
+                                    <a href="tel:+18639786804">863-978-6804</a>
+                                </li>
+                                <li>
+                                    <h3>Dirección</h3>
+                                    <a href="https://www.google.com/maps/place/1500+42nd+St,+Winter+Haven,+FL" target="_blank"><span>1500 42nd St, Winter Haven, FL</span></a>
+                                </li>
+                                <li>
+                                    <h3>Correo Electrónico</h3>
+                                    <a href="mailto:jackie@rackiessalon.com">jackie@rackiessalon.com</a>
+                                </li>
+                                <li>
+                                    <h3>Otros</h3>
+                                    <ul class="icons">
+                                        <li><a href="https://www.facebook.com/people/Rackies-Salon/" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                        <li><a href="#" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                        <li><a href="https://www.google.com/maps/place/1500+42nd+St,+Winter+Haven,+FL" target="_blank" class="icon solid fa-heart"><span class="label">LinkedIn</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </footer>
+                    </section>
+
+                <!-- Copyright -->
+                    <div class="copyright">&copy; Rackie's Salon 2025. Todos los derechos reservados.</div>
+
             </div>
-            <div class="circle">
-                <div class="circle-content">
-                    <img src="/images/fondos/01.jpg" alt="Salón" class="circle-image">
-                </div>
-            </div>
-        </a>
-        <a href="https://www.ejemplo-barberia.com" class="circle-wrapper" target="_blank">
-            <div class="particles">
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-                <div class="particle"></div>
-            </div>
-            <div class="circle">
-                <div class="circle-content">
-                    <img src="/images/fondos/02.jpg" alt="Barbería" class="circle-image">
-                </div>
-            </div>
-        </a>
-    </div>
-</body>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
 </html>
